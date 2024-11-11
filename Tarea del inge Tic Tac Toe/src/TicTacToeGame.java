@@ -25,13 +25,11 @@ public class TicTacToeGame {
 
     public boolean checkForWin() {
         for (int i = 0; i < 3; i++) {
-            // Check rows and columns
             if (board[i][0] == currentPlayer && board[i][1] == currentPlayer && board[i][2] == currentPlayer)
                 return true;
             if (board[0][i] == currentPlayer && board[1][i] == currentPlayer && board[2][i] == currentPlayer)
                 return true;
         }
-        // Check diagonals
         if (board[0][0] == currentPlayer && board[1][1] == currentPlayer && board[2][2] == currentPlayer)
             return true;
         if (board[0][2] == currentPlayer && board[1][1] == currentPlayer && board[2][0] == currentPlayer)

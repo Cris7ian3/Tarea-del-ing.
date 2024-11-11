@@ -32,7 +32,6 @@ public class TicTacToeGUI extends JFrame implements ActionListener {
         JButton clickedButton = (JButton) e.getSource();
         int row = -1, col = -1;
 
-        // Find which button was clicked
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (clickedButton == buttons[i][j]) {
@@ -43,7 +42,6 @@ public class TicTacToeGUI extends JFrame implements ActionListener {
             }
         }
 
-        // Make a move
         if (row != -1 && col != -1 && game.makeMove(row, col)) {
             clickedButton.setText(String.valueOf(game.getCurrentPlayer()));
 
